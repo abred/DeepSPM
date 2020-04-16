@@ -1,0 +1,6 @@
+numpy
+scikit-learn
+tensorflow-gpu==1.12
+scipy
+natsort
+# pypng (required but not working with conda, use: pip install pypng )
