@@ -34,17 +34,16 @@ An SPM system controlled by DeepSPM consists of two parts:
 This DeepSPM software itself consists of two parts:
     - A [classifier](#classifier) that is trained to analyze recorded images and determine whether or not the shape of the probe is sufficient.
     - The [agent](#agent), which controls the microscope by sending commands to the control server.
-    It uses the classifier to identify insufficient probe morphologies.
+      It uses the classifier to identify insufficient probe morphologies.
 
 # Instrument Control Server
 ## Requirements
-- Nanonis v5 (SPECS) controlled SPM setup.
+- Nanonis v5 (SPECS) controlled SPM setup.(It is possible to use other SPM systems that allows for scripting, this would however require the re-implementation of the instrument control server, see below )
 - The instrument control server needs to  run on the instrument control PC.
 - The nanonis_programming_interface_v5-5.7.861.78 or newer needs to be installed and configured (see the Nanonis instructions on how to do this).
 - LabView (2014 or higher) needs to be installed.
 - To send status/warning emails a python 3 install is required (e.g. miniconda) 
-(It is possible to use other SPM systems that allows for scripting, this would however require the re-implementation of the instrument control server, see below ).
-- Labview
+
 
 ## Installation
 ``` shell
@@ -177,6 +176,7 @@ supply the path to the `mask.npy` written by the previous run)
 To interrupt a running agent,
 open a second terminal,
 navigate to its output directory, and create a file named `stop`.
+
 ``` shell
 touch stop
 ```
