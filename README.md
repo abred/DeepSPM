@@ -41,7 +41,7 @@ This DeepSPM software itself consists of two parts:
 The Instrument Control Server controls SPM through the Nanonis programming interface. The server is able to execute a series of commands that are selected by DeepSPM ad send to the server via TCP/IP. The details of these commands are specfic to each SPM setup and need to adjusted accordingly.  This can be done by changing the parameters of the commands if the setup is similar to the Low Temperature Scanning Tunneling Microscope used in the study. 
 
 ## Requirements
-- Nanonis v5 (SPECS) controlled SPM setup.(It is possible to use other SPM systems that allows for scripting, this would however require the re-implementation of the instrument control server, see below )
+- Nanonis v5 (SPECS) controlled SPM setup. (It is possible to use other SPM systems that allows for scripting, this would however require the re-implementation of the instrument control server, see below)
 - The instrument control server needs to  run on the instrument control PC.
 - The nanonis_programming_interface_v5-5.7.861.78 or newer needs to be installed and configured (see the Nanonis instructions on how to do this).
 - LabView (2014 or higher) needs to be installed.
@@ -54,7 +54,8 @@ git clone https://github.com/abred/DeepSPM.git
 ```
 
 The instrument control server consists of several Labview Virtual Intruments (VIs),
-which be run using the local LabView installation. These VI are downloaded when you clone the repo. It is important to be keep the directory structure so that the server can find the individual command VIs.
+which can be run using the local LabView installation. These VI are downloaded when you clone the repo. 
+It is important to keep the directory structure so that the server can find the individual command VIs.
 
 The basic settings for operation need to be set in the the [deepSPM_server.ini](<./labview/Nanonis Server/deepSPM_server.ini>) file.
 Make sure to go through those settings carefully as the **defaults will not work**.
