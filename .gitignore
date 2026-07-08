@@ -1,0 +1,10 @@
+venv
+.idea
+.vscode
+__pycache__
+*.pyc
+*.env
+*.test
+*.log
+.env.test
+.python-version
